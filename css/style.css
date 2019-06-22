@@ -13332,7 +13332,7 @@ input[type="submit"].form-control:focus {
 
 .larger-font li {
   font-size: 16px;
-  overflow: auto;
+  margin: 20px !important;
 }
 
 .white {
