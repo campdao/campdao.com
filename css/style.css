@@ -13350,3 +13350,8 @@ input[type="submit"].form-control:focus {
 ul#main-menu {
   transform: translateX(-18%);
 }
+
+#mobile-menu ul {
+  list-style: none;
+  transform: translateX(0%) !important;
+}
