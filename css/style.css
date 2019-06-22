@@ -13343,7 +13343,14 @@ input[type="submit"].form-control:focus {
   max-height: 40px;
 }
 
-.logo-footer img {
-  max-height: 40px;
+.footer {
+  transform: translateY(0%);
 }
 
+.copyrights-message {
+  transform: translate(-73%,6px);
+}
+
+ul#main-menu {
+  transform: translateX(-18%);
+}
