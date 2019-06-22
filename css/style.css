@@ -13347,10 +13347,6 @@ input[type="submit"].form-control:focus {
   transform: translateY(0%);
 }
 
-.copyrights-message {
-  transform: translate(-73%,6px);
-}
-
 ul#main-menu {
   transform: translateX(-18%);
 }
