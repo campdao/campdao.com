@@ -38,6 +38,7 @@ $( window ).on( "load" , function() {
 	sliderImageBG();
 	parallaxStellar();
 	portfolioSingleExpander();
+	initializeTimer();
 });
 
 // *** On resize *** //
@@ -55,6 +56,42 @@ $( window ).on( "scroll" , function() {
 	stickyNav();
 	scrollTopButton();
 });
+
+function pad(n, width, z) {
+	z = z || '0';
+	n = n + '';
+	return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+  }
+
+function pad2(n) {
+	return pad(n, 2);
+}
+
+function initializeTimer() {
+	
+	setInterval(function(){ 
+		// Get today's date and time
+		var saleEnd = new Date('Jul 4, 2019 11:59:59');
+		var now = new Date();
+
+		// Find the distance between now and the count down date
+		var timeLeft = saleEnd - now;
+
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+		days = pad2(days);
+		hours = pad2(hours);
+		minutes = pad2(minutes);
+		seconds = pad2(seconds);
+
+		var el = document.getElementById("timer");
+		el.innerHTML = `${days} Days! ${hours}:${minutes}:${seconds}`;
+	}, 1000);
+}
 
 
 // *** jQuery noConflict *** //
