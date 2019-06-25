@@ -68,10 +68,14 @@ function pad2(n) {
 }
 
 function initializeTimer() {
-	
+	// Get timer dom element
+	var el = document.getElementById("timer");
+
+	// Get end date and time
+	var saleEnd = new Date('Jul 4, 2019 11:59:59');
+
 	setInterval(function(){ 
 		// Get today's date and time
-		var saleEnd = new Date('Jul 4, 2019 11:59:59');
 		var now = new Date();
 
 		// Find the distance between now and the count down date
@@ -87,7 +91,6 @@ function initializeTimer() {
 		minutes = pad2(minutes);
 		seconds = pad2(seconds);
 
-		var el = document.getElementById("timer");
 		el.innerHTML = `${days} Days! ${hours}:${minutes}:${seconds}`;
 	}, 1000);
 }
