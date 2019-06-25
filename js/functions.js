@@ -83,7 +83,6 @@ function initializeTimer() {
 		var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-		days = pad2(days);
 		hours = pad2(hours);
 		minutes = pad2(minutes);
 		seconds = pad2(seconds);
