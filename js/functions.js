@@ -72,9 +72,9 @@ function initializeTimer() {
 	var el = document.getElementById("timer");
 
 	// Get end date and time
-	var saleEnd = new Date('Jul 4, 2019 11:59:59');
+    var saleEnd = new Date('Jul 4, 2019 23:59:59 PST');
 
-	setInterval(function(){ 
+	setInterval(function(){
 		// Get today's date and time
 		var now = new Date();
 
@@ -197,11 +197,11 @@ var HTMLDir = $( "html" ).css( "direction" ),
 	owlRtl;
 
 // If page is RTL
-if ( HTMLDir == "rtl" ) { 
+if ( HTMLDir == "rtl" ) {
 	// Owl Carousel
-	owlRtl = true 
-} else { 
-	owlRtl = false 
+	owlRtl = true
+} else {
+	owlRtl = false
 }
 
 
@@ -242,7 +242,7 @@ function scrollProgress() {
     var scroll = $(document).scrollTop();
     var scrollperc = scroll/(height/100);
     $("#scroll-progress").width(scrollperc+'%');
-    $(".scroll-percent").text(scrollperc.toFixed(0)+'%');	
+    $(".scroll-percent").text(scrollperc.toFixed(0)+'%');
 }
 
 
@@ -305,7 +305,7 @@ function mobileMenu() {
 		e.preventDefault();
 		$( this ).toggleClass( "is-active" );
 		$( "#mobile-menu" ).slideToggle( 250 );
-	});	
+	});
 }
 
 
@@ -326,11 +326,11 @@ function superfishMenu() {
 // *** One Page Nav *** //
 function onePageNav() {
 	$.scrollIt({
-      upKey: false,           
-      downKey: false,         
-      scrollTime: 0,          
+      upKey: false,
+      downKey: false,
+      scrollTime: 0,
 	  activeClass: 'current',
-      onPageChange: null,     
+      onPageChange: null,
 	  topOffset: -90
 	});
 
@@ -346,7 +346,7 @@ function onePageNav() {
         	$( "#mobile-menu" ).slideUp( 250 );
         	$( ".mobile-menu-btn" ).removeClass( "is-active" );
         }
-    });    
+    });
 }
 
 
@@ -369,7 +369,7 @@ function stickyNav() {
 			navBar.addClass( "sticky" );
 		} else {
 			navBar.removeClass( "sticky" );
-		}		
+		}
 	}
 }
 
@@ -432,7 +432,7 @@ function bannerScrollEffect() {
 		// Move Scroll Effect
 		if ( scrollingDistance < banHeadVertDistance ) {
 			$( ".banner-slider" )
-				.css({ 
+				.css({
 					"transform" : "translateY(" + scrollingDistance * 0.4 + "px)"
 				});
 		}
@@ -576,12 +576,12 @@ var $portfolioIsotope = $( ".portfolio-items" ).isotope({
 		  transform: 'scale(1)'
 		}
 });
-function portfolioIsotope() {	
+function portfolioIsotope() {
 	$( ".portfolio-categories a" ).on( "click" , function(e) {
 		e.preventDefault();
 		$( ".portfolio-categories a" ).removeClass( "active" );
 		$( this ).addClass( "active" );
-		
+
 		var dataFilter = $( this ).data( "filter" );
 		$portfolioIsotope.isotope({
 			filter: dataFilter
@@ -657,7 +657,7 @@ function portfolioSingleSlider() {
 // Single Portfolio Expander
 function portfolioSingleExpander() {
     ( function() {
-		$(".portfolio-item .portfolio-single-link").on("click",function(){$("#portfolio-single-content").removeClass("opened");var c,a=$(window).scrollTop()+90,b=parseInt($(".portfolio-top").offset().top,10);a!==b?($("html, body").animate({scrollTop:$(".portfolio-top").offset().top-90},{easing:"easeInOutExpo",duration:1e3}),c=1200):c=0;var d=$(this).find(".open-portfolio-single").attr("href")+" .portfolio-single-load";setTimeout(function(){$("#portfolio-single-wrap").addClass("opened").animate({height:95},0,function(){setTimeout(function(){$(".portfolio-single-loader").addClass("opened"),setTimeout(function(){$("#portfolio-single-content").load(d,function(a){$("#portfolio-single-content").waitForImages({finished:function(){$("#portfolio-single-wrap").removeClass("opened"),$(".portfolio-single-loader").removeClass("opened"),portfolioSingleSlider(),sliderImageBG(),optimizeSliderImageBG(),dataCustomOptions(),setTimeout(function(){$("#portfolio-single-wrap, #portfolio-single-content").height($(".portfolio-single-load").outerHeight()),$("#portfolio-single-content").addClass("opened")},500)},waitForAll:!0})})},1e3)},600)})},c)}),$(document).on("click",".project-close",function(a){return $("#portfolio-single-content").removeClass("opened"),$("#portfolio-single-wrap").removeClass("opened"),setTimeout(function(){$("#portfolio-single-wrap").height(0)},500),setTimeout(function(){$(".portfolio-single-load").remove()},500),setTimeout(function(){$("html, body").animate({scrollTop:$(".portfolio-top").offset().top-90},600)},1200),!1});      
+		$(".portfolio-item .portfolio-single-link").on("click",function(){$("#portfolio-single-content").removeClass("opened");var c,a=$(window).scrollTop()+90,b=parseInt($(".portfolio-top").offset().top,10);a!==b?($("html, body").animate({scrollTop:$(".portfolio-top").offset().top-90},{easing:"easeInOutExpo",duration:1e3}),c=1200):c=0;var d=$(this).find(".open-portfolio-single").attr("href")+" .portfolio-single-load";setTimeout(function(){$("#portfolio-single-wrap").addClass("opened").animate({height:95},0,function(){setTimeout(function(){$(".portfolio-single-loader").addClass("opened"),setTimeout(function(){$("#portfolio-single-content").load(d,function(a){$("#portfolio-single-content").waitForImages({finished:function(){$("#portfolio-single-wrap").removeClass("opened"),$(".portfolio-single-loader").removeClass("opened"),portfolioSingleSlider(),sliderImageBG(),optimizeSliderImageBG(),dataCustomOptions(),setTimeout(function(){$("#portfolio-single-wrap, #portfolio-single-content").height($(".portfolio-single-load").outerHeight()),$("#portfolio-single-content").addClass("opened")},500)},waitForAll:!0})})},1e3)},600)})},c)}),$(document).on("click",".project-close",function(a){return $("#portfolio-single-content").removeClass("opened"),$("#portfolio-single-wrap").removeClass("opened"),setTimeout(function(){$("#portfolio-single-wrap").height(0)},500),setTimeout(function(){$(".portfolio-single-load").remove()},500),setTimeout(function(){$("html, body").animate({scrollTop:$(".portfolio-top").offset().top-90},600)},1200),!1});
     })();
 }
 
@@ -736,7 +736,7 @@ function lightboxIframe() {
 		removalDelay: 160,
 		preloader: false,
 		fixedContentPos: false
-	});	
+	});
 }
 
 
@@ -751,7 +751,7 @@ function lightboxImage() {
 		removalDelay: 160,
 		preloader: false,
 		fixedContentPos: false
-	});	
+	});
 }
 
 // *** Lightbox Gallery *** //
@@ -765,7 +765,7 @@ function lightboxGallery() {
 		removalDelay: 160,
 		preloader: false,
 		fixedContentPos: false
-	});	
+	});
 }
 
 
