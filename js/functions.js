@@ -91,7 +91,7 @@ function initializeTimer() {
 		minutes = pad2(minutes);
 		seconds = pad2(seconds);
 
-		el.innerHTML = `${days} Days! ${hours}:${minutes}:${seconds}`;
+		el.innerHTML = `Sale ended! Goal reached.`;
 	}, 1000);
 }
 
