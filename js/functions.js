@@ -91,7 +91,7 @@ function initializeTimer() {
 		minutes = pad2(minutes);
 		seconds = pad2(seconds);
 
-		el.innerHTML = `Sale ended! Goal reached.`;
+		el.innerHTML = `Interested in the future of decentralized governance?`;
 	}, 1000);
 }
 
